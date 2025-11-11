@@ -1,11 +1,8 @@
-
-# Программа для анализа транзакций
-
-# Константы
+# валюта
 RATES = {"USD": 90.0, "EUR": 100.0, "RUB": 1.0}
 VALID_TYPES = {"доход", "расход"}
 
-# Функции
+
 def parse_line(line, lineno):
     parts = line.strip().split(";")
     if len(parts) != 4:
@@ -103,3 +100,4 @@ if __name__ == '__main__':
         print("ERROR:", result["error"])
     else:
         print(result["report"])
+
